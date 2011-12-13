@@ -1,7 +1,7 @@
 SelectView
 ==========
 
-This class provides a new Contao view that displays a DCA in select mode but with your custom buttons.
+This class provides a new Contao (2.10+) view that displays a DCA in select mode but with your custom buttons.
 
 Usage
 -----
