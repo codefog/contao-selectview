@@ -70,14 +70,12 @@ class tl_user_export extends Backend
 			array
 			(
 				'name' => 'exportTxt',
-				'label' => 'Export to TXT',
-				'callback' => 'exportTxt'
+				'label' => 'Export to TXT'
 			),
 			array
 			(
 				'name' => 'displaySelected',
-				'label' => 'Display selected',
-				'callback' => 'displaySelected'
+				'label' => 'Display selected'
 			)
 		);
 
