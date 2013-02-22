@@ -1,7 +1,7 @@
 selectview Contao Extension
 ===========================
 
-This class provides a new Contao (2.10+) view that displays a DCA in select mode but with your custom buttons.
+This class provides a new Contao view that displays a DCA in select mode but with your custom buttons. Please see the below code for instructions.
 
 ### Compatibility
 - Contao 2.10
