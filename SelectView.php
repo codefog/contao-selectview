@@ -1,31 +1,14 @@
-<?php if (!defined('TL_ROOT')) die('You cannot access this file directly!');
+<?php
 
 /**
- * Contao Open Source CMS
- * Copyright (C) 2005-2011 Leo Feyer
- *
- * Formerly known as TYPOlight Open Source CMS.
- *
- * This program is free software: you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation, either
- * version 3 of the License, or (at your option) any later version.
+ * selectview extension for Contao Open Source CMS
  * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
+ * Copyright (C) 2013 Codefog
  * 
- * You should have received a copy of the GNU Lesser General Public
- * License along with this program. If not, please visit the Free
- * Software Foundation website at <http://www.gnu.org/licenses/>.
- *
- * PHP version 5
- * @copyright  Kamil Kuzminski 2011
- * @author     Kamil Kuzminski <http://qzminski.com>
- * @package    Backend
- * @license    LGPL
- * @filesource
+ * @package selectview
+ * @link    http://codefog.pl
+ * @author  Kamil Kuzminski <kamil.kuzminski@codefog.pl>
+ * @license LGPL
  */
 
 
@@ -33,9 +16,6 @@
  * Class SelectView
  * 
  * Provide a new back end view similar to "Edit multiple".
- * @copyright  Kamil Kuzminski 2011
- * @author     Kamil Kuzminski <http://qzminski.com>
- * @package    Backend
  */
 class SelectView extends Backend
 {
@@ -57,6 +37,12 @@ class SelectView extends Backend
 	 * @var string
 	 */
 	protected $strAction;
+
+	/**
+	 * Current version
+	 * @var string
+	 */
+	public static $strVersion = '1.0.0';
 
 
 	/**
@@ -149,9 +135,7 @@ class SelectView extends Backend
 									$arrButton['name']);
 		}
 
-		// Replace the default buttons
-		$strBuffer = preg_replace('/<div class="tl_submit_container">\s+(<input type="submit"(.*)?>\s+)+\s*<\/div>/', $strButtons . '</div>', $strBuffer);
-		return $strBuffer;
+		return preg_replace('/<div class="tl_submit_container">\s+(<input type="submit"(.*)?>\s+)+\s*<\/div>/', $strButtons . '</div>', $strBuffer);
 	}
 }
 
@@ -160,9 +144,6 @@ class SelectView extends Backend
  * Class DC_SelectView
  * 
  * Provide methods to display DCA in select mode.
- * @copyright  Kamil Kuzminski 2011
- * @author     Kamil Kuzminski <http://qzminski.com>
- * @package    Backend
  */
 class DC_SelectView extends DC_Table
 {
@@ -178,5 +159,3 @@ class DC_SelectView extends DC_Table
 		return parent::showAll();
 	}
 }
-
-?>
